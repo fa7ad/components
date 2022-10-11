@@ -55,4 +55,8 @@ export interface AlertProps extends BaseComponentProps {
    * **Deprecated**, replaced by `action`.
    */
   onButtonClick?: NonCancelableEventHandler;
+  /**
+   * Alternative text for the status icon (success, error, warning, info).
+   */
+  statusIconAriaLabel?: string;
 }

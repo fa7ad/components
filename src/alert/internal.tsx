@@ -37,6 +37,7 @@ export default function InternalAlert({
   onDismiss,
   onButtonClick,
   __internalRootRef = null,
+  statusIconAriaLabel,
   ...rest
 }: InternalAlertProps) {
   const baseProps = getBaseProps(rest);
@@ -73,7 +74,7 @@ export default function InternalAlert({
     >
       <VisualContext contextName="alert">
         <div className={clsx(styles.alert, styles[`type-${type}`])}>
-          <div className={clsx(styles.icon, styles.text)}>
+          <div className={clsx(styles.icon, styles.text)} role="img" aria-label={statusIconAriaLabel}>
             <InternalIcon name={typeToIcon[type]} size={size} />
           </div>
           <div className={styles.body}>
